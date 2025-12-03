@@ -28,7 +28,7 @@ export default async function handler(req, res) {
 
       const msg = {
         to: email, // Change to your recipient
-        from: "eggodev@gmail.com", // Change to your verified sender
+        from: process.env.SENDER_EMAIL, // Change to your verified sender
         subject: "Compra realizada en ayudantedesanta.vercel.app",
         text: message,
         html: `<div>${message}</div><div style="color:red;">Esta transacción no es real, sólo corresponde a una demostración.</div>`,
